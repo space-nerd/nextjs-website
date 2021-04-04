@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -10,37 +11,34 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <h1 className={styles.name}>TEST</h1>
+        <header className={styles.header}>
+          <img src="icon.png" alt="" className={styles.icon}></img>
+          <h1 className={styles.title}>
+          Change the color of my <h1 className={styles.name}>light</h1>
         </h1>
-
+        </header>
+        
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="http://192.168.1.100:3000/color?red" className={styles.card}>
+            <h3>Red &rarr;</h3>
+            <p>This changes the color to red.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <a href="http://192.168.1.100:3000/color?green" className={styles.card}>
+            <h3>Green &rarr;</h3>
+            <p>This changes the color to green.</p>
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            href="http://192.168.1.100:3000/color?blue" className={styles.card}>
+            <h3>Blue &rarr;</h3>
+            <p>This changes the color to blue.</p>
+          </a>
+
+          <a
+            href="http://192.168.1.100:3000/colorselector" className={styles.card}>
+            <h3>Custom Color &rarr;</h3>
+            <p>Choose a custom color.</p>
           </a>
         </div>
       </main>
