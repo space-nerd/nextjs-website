@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import getState from './getstate'
 var Govee = require("node-govee-led");
 
 var Client = new Govee({
@@ -135,11 +133,6 @@ export default function Home() {
             <h3>Orange &rarr;</h3>
             <p>This changes the color to orange.</p>
           </button>
-
-          <button className={styles.card} type="color">
-            <h3>Custom Color &rarr;</h3>
-            <p>Choose a custom color.</p>
-          </button>
           </div>
 
           <h1>Brightness Control</h1>
@@ -186,8 +179,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by Next.js, created by Vercel
-        </a><br></br>
-        <div className={styles.iconCredit}>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart" className={styles.iconCreator}>smalllikeart</a> from <a href="https://www.flaticon.com/" title="Flaticon" className={styles.iconWebsite}>www.flaticon.com</a></div>
+        </a>
       </footer>
     </div>
   )
